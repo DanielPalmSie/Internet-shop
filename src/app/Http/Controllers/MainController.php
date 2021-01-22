@@ -35,11 +35,28 @@ class MainController extends Controller
     }
 
     /**
+     * @param $category
      * @param null $product
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function product($product = null)
+    public function product($category, $product = null)
     {
         return view('product', ['product' => $product]);
+    }
+
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function basket()
+    {
+        return view('product');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function basketPlace()
+    {
+        return view('order');
     }
 }
