@@ -46,19 +46,5 @@ class MainController extends Controller
         return view('product', ['product' => $product]);
     }
 
-    /**
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function basket()
-    {
-        return view('product');
-    }
 
-    /**
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function basketPlace()
-    {
-        return view('order');
-    }
 }

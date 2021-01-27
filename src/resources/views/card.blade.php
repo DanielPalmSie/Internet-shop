@@ -5,12 +5,13 @@
             <h3>{{ $product->name }}</h3>
             <p>{{ $product->price }} ₽</p>
             <p>
-            <form action="http://internet-shop.tmweb.ru/basket/add/1" method="POST">
-                <a href="{{ route('basket') }}" class="btn btn-primary" role="button">В корзину</a>
+            <form action="{{ route('basket-add', $product) }}" method="POST">
+                <button type="submit" class="btn btn-primary" role="button">В корзину</button>
                 <a href="{{ route('product', [$product->category->code, $product->code]) }}"
                    class="btn btn-default"
                    role="button">Подробнее</a>
-                <input type="hidden" name="_token" value="OtmKB4yr54mDJVreKiz4WoHXoYpcBmN1z6BXQXGg"></form>
+                @csrf
+            </form>
             </p>
         </div>
     </div>
