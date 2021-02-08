@@ -1,9 +1,9 @@
-@extends('master', ['file' => 'product'])
+@extends('layouts.master', ['file' => 'product'])
 
 @section('title', 'Товар')
 
 @section('content')
-    <div class="starter-template">
+
         <h1>iPhone X 64GB</h1>
         <h2>Мобильные телефоны</h2>
         <h2>{{ $product }}</h2>
@@ -15,5 +15,5 @@
             <button type="submit" class="btn btn-success" role="button">Добавить в корзину</button>
 
             <input type="hidden" name="_token" value="OtmKB4yr54mDJVreKiz4WoHXoYpcBmN1z6BXQXGg">        </form>
-    </div>
+
 @endsection
